@@ -9,6 +9,7 @@
 	<meta name="language" content="pt-br">
     <link rel="stylesheet" href="main.css">
     <style>
+        
         /* Adiciona estilos para espaçamento */
         .page {
             text-align: center; /* Centraliza o conteúdo */
@@ -16,7 +17,7 @@
         }
 
         .logo {
-            margin: 10px; /* Adiciona margem ao redor da imagem */
+            margin: 20px; /* Adiciona margem ao redor da imagem */
         }
 
         .formLogin {
@@ -25,14 +26,25 @@
 
         #rodape {
             margin-top: 10px;   /* Adiciona margem superior ao rodapé */
+
+            .page {
+            text-align: center;}
         }
+
+        .logo {
+            border-radius: 4%; /* 5% para tornar a borda completamente redonda */
+        }
+    </style>
+        
     </style>
 </head>
 <body>
     <div class="page">
         <!-- Adicione a imagem abaixo -->
         <img src="http://www3.emater.pb.gov.br/swap/imagens/topo.png" alt="Logo" class="logo"> 
-
+        <style>
+        
+        </style>
         <form method="POST" class="formLogin" onsubmit="submitForm(event)">
             <h1>Login</h1>
             <p>Digite os seus dados de acesso no campo abaixo.</p>
@@ -46,6 +58,7 @@
             <input type="text" name="captcha_code" size="10" maxlength="6">
             <a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">[ Mudar imagem ]</a>
         <br><br>
+
         </form>
 
         <!-- Adicione o rodapé abaixo -->
@@ -77,3 +90,5 @@
     </script>
 </body>
 </html>
+
+
