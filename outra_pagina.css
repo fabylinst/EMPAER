@@ -1,0 +1,18 @@
+/* Adicione estilos conforme necessário para a página de projetos */
+.page {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #ff0000;
+}
+
+p {
+    color: #0bcf7e;
+}
+
+a {
+    color: #137921;
+    text-decoration: none;
+}

@@ -1,14 +1,15 @@
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt"><head>
-	<meta http-equiv="pragma" content="no-cache">
-	<meta name="revisit-after" content="4">
-	<meta name="description" content="Sistema SWAP - EMPAER/PB">
-	<meta name="robots" content="noindex">
-	<meta name="rating" content="General">
-	<meta name="author" content="GETEC - EMPAER/PB">
-	<meta name="language" content="pt-br">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="revisit-after" content="4">
+    <meta name="description" content="Sistema SWAP - EMPAER/PB">
+    <meta name="robots" content="noindex">
+    <meta name="rating" content="General">
+    <meta name="author" content="GETEC - EMPAER/PB">
+    <meta name="language" content="pt-br">
     <link rel="stylesheet" href="main.css">
-    <style>
+    <style>  
         
         /* Adiciona estilos para espaçamento */
         .page {
@@ -34,61 +35,61 @@
         .logo {
             border-radius: 4%; /* 5% para tornar a borda completamente redonda */
         }
-    </style>
+    
         
+   
+        /* Adicione estilos conforme necessário */
+
+        /* Exemplo de estilo para o conteúdo sensível */
+        #conteudoSensivel {
+            display: none; /* Inicialmente oculto */
+        }
     </style>
 </head>
 <body>
     <div class="page">
         <!-- Adicione a imagem abaixo -->
         <img src="http://www3.emater.pb.gov.br/swap/imagens/topo.png" alt="Logo" class="logo"> 
-        <style>
-        
-        </style>
-        <form method="POST" class="formLogin" onsubmit="submitForm(event)">
+   <style>
+
+   </style>        
+        <form method="POST" class="formLogin" onsubmit="return realizarLogin()">
+            <!-- Conteúdo do formulário de login existente -->
             <h1>Login</h1>
+            
             <p>Digite os seus dados de acesso no campo abaixo.</p>
-            <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="Digite seu e-mail" autofocus="true" />
-            <label for="password">Senha</label>
-            <input type="password" id="password" placeholder="Digite sua senha" />
-            <a href="/">Esqueci minha senha</a>
-            <input type="submit" value="Acessar" class="btn" />
-            <img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image">
-            <input type="text" name="captcha_code" size="10" maxlength="6">
-            <a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">[ Mudar imagem ]</a>
-        <br><br>
+            <label for="username">usuário:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Entrar">
+    
 
         </form>
 
-        <!-- Adicione o rodapé abaixo -->
+        <!-- Adicione o rodapé da sua página existente aqui -->
         <div id="rodape">
             GETEC - <a href="http://www.empaer.pb.gov.br">EMPAER</a>
         </div>
     </div>
 
     <script>
-        function submitForm(event) {
-            event.preventDefault();
+        function realizarLogin() {
+            // Lógica de autenticação aqui
 
-            // Verifica a resposta personalizada
-            var respostaCustomizada = document.getElementById("customQuestion").value;
-            if (respostaCustomizada !== "OpenAI") {
-                alert("Resposta incorreta. Por favor, tente novamente.");
-                return;
+            // Exemplo: Se as credenciais forem válidas, mostra o conteúdo sensível
+            var credenciaisValidas = true; // Substitua por sua lógica de autenticação
+            if (credenciaisValidas) {
+                document.getElementById('conteudoSensivel').style.display = 'block';
+            } else {
+                alert('Credenciais inválidas. Tente novamente.');
             }
 
-            // Restante do código para enviar o formulário
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-
-            console.log("E-mail:", email);
-            console.log("Senha:", password);
-
-            // Adicione aqui o código para enviar os dados ao servidor ou realizar outras ações
+            // Impede o envio do formulário padrão
+            return false;
         }
     </script>
 </body>
 </html>
-
-
